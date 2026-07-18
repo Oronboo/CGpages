@@ -1201,7 +1201,7 @@ function init() {
     const viewport = container.createRendererDOM(
         640,
         480,
-        new THREE.Vector3(0, 0, 10)
+        new THREE.Vector3(-30, 0, 33)
     );
 
     document.body.appendChild(viewport);
