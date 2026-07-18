@@ -14,7 +14,6 @@ class ThreeJSContainer {
     private fishes: THREE.Points[] = [];
     private fishSpeed: THREE.Vector3[] = [];
 
-    private torii!: THREE.Group;
     private glowTorii!: THREE.Group;
 
     private stars!: THREE.Points;
@@ -24,12 +23,6 @@ class ThreeJSContainer {
 
     private audienceLights!: THREE.Points;
 
-    // 追加
-    private auroraCanvas!: HTMLCanvasElement;
-    private auroraCtx!: CanvasRenderingContext2D;
-    private auroraTexture!: THREE.CanvasTexture;
-    private auroraTime: number = 0;
-    private auroraOffset = 0;
     constructor() { }
 
     // レンダラー作成
@@ -88,7 +81,7 @@ class ThreeJSContainer {
         const geometry = new THREE.BufferGeometry();
 
         const texture = new THREE.TextureLoader().load(
-            "./src/bable.png"
+            "./bable.png"
         );
 
         const material = new THREE.PointsMaterial({
